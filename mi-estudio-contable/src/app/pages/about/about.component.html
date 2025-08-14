@@ -1,0 +1,63 @@
+<section class="about-intro py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="fw-bold">Sobre Nosotros</h2>
+        <p class="lead">En SGR Contadores, ofrecemos soluciones integrales en asesoría contable, fiscal y laboral para PYMES y emprendedores en Puente Piedra.</p>
+        <p>Con más de 10 años de experiencia, nuestro enfoque está en brindar un servicio personalizado, eficiente y confiable, ayudando a nuestros clientes a cumplir con sus obligaciones fiscales y mejorar su rentabilidad.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="/assets/images/about-us.jpg" alt="SGR Contadores - Nosotros" class="img-fluid rounded shadow-sm" width="500" height="300">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Nuestro Equipo</h2>
+    <div class="row g-4 justify-content-center">
+      @for (member of team; track member.name) {
+        <div class="col-md-4 text-center">
+          <div class="card h-100 shadow-sm border-0">
+            <img [src]="member.image" [alt]="'Foto de ' + member.name" class="card-img-top rounded-circle w-50 mx-auto mt-4" style="aspect-ratio: 1 / 1; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">{{ member.name }}</h5>
+              <p class="card-text text-muted">{{ member.role }}</p>
+              <p class="card-text">{{ member.bio }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="values py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Nuestros Valores</h2>
+    <div class="row g-4">
+      @for (value of values; track value.title) {
+        <div class="col-md-4">
+          <div class="card h-100 p-4 text-center border-0 shadow-sm">
+            <div class="mb-3 text-primary fs-1">
+              <i [class]="value.icon"></i>
+            </div>
+            <h5 class="fw-bold mb-3">{{ value.title }}</h5>
+            <p>{{ value.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="call-to-action text-white text-center py-5" style="margin-bottom: 5px;">
+  <div class="container">
+    <h2 class="display-6 fw-bold mb-3">¿Listo para empezar?</h2>
+    <p class="mb-4">Contáctanos hoy y comienza a disfrutar de una asesoría contable de calidad.</p>
+    <a href="https://wa.me/51987654321?text=Hola%20SGR%20Contadores,%20me%20gustaría%20más%20información" target="_blank" class="btn btn-success btn-lg px-4">
+      <i class="fab fa-whatsapp me-2"></i> Consultar por WhatsApp
+    </a>
+  </div>
+</section>

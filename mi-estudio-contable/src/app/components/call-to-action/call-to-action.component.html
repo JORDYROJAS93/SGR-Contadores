@@ -1,0 +1,35 @@
+<section class="cta-section py-5" [ngClass]="{
+  'bg-primary text-white': variant === 'primary',
+  'bg-secondary text-white': variant === 'secondary',
+  'bg-light text-dark': variant === 'light'
+}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3">{{title}}</h2>
+        <p class="lead mb-lg-0">{{description}}</p>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+        <div class="d-flex flex-column flex-lg-row gap-3 justify-content-lg-end">
+          <a [routerLink]="buttonLink" class="btn btn-lg"
+            [ngClass]="{
+              'btn-light': variant === 'primary' || variant === 'secondary',
+              'btn-primary': variant === 'light'
+            }">
+            {{buttonText}}
+          </a>
+          
+          @if (hasWhatsApp) {
+            <a [href]="'https://wa.me/' + phoneNumber" class="btn btn-lg"
+              [ngClass]="{
+                'btn-outline-light': variant === 'primary' || variant === 'secondary',
+                'btn-outline-primary': variant === 'light'
+              }" target="_blank">
+              <i class="fab fa-whatsapp me-2"></i> WhatsApp
+            </a>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
