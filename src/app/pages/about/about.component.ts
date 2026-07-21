@@ -35,7 +35,7 @@ export class AboutComponent {
       bio: 'Experto en asesoría fiscal y contabilidad integral. Cuenta con más de 10 años de experiencia en el sector.',
       image: 'assets/images_nosotros/Denis.jpg',
       visible: true,
-      linkedin:'https://www.linkedin.com/in/jordy-rojas-torres-361a0b119',
+      linkedin:'',
     },
     {
       name: 'Delsy Rojas',
