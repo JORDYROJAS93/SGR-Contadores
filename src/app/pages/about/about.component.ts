@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
+  nombre: string;
+  rol: string;
+  biografia: string;
   image: string;
   visible?: boolean;
   linkedin?: string;
@@ -30,25 +30,25 @@ interface Value {
 export class AboutComponent {
   team: TeamMember[] = [
     {
-      name: 'Dany Rojas',
-      role: 'Contador Público',
-      bio: 'Experto en asesoría fiscal y contabilidad integral. Cuenta con más de 10 años de experiencia en el sector.',
+      nombre: 'Dany Rojas',
+      rol: 'Contador Público',
+      biografia: 'Experto en asesoría fiscal y contabilidad integral. Cuenta con más de 10 años de experiencia en el sector.',
       image: 'assets/images_nosotros/Denis.jpg',
       visible: true,
       linkedin:'',
     },
     {
-      name: 'Delsy Rojas',
-      role: 'Especialista Laboral',
-      bio: 'Responsable del área laboral y planillas. Ayuda a las empresas a cumplir con la normativa vigente.',
+      nombre: 'Delsy Rojas',
+      rol: 'Especialista Laboral',
+      biografia: 'Responsable del área laboral y planillas. Ayuda a las empresas a cumplir con la normativa vigente.',
       image: 'assets/images_nosotros/Delsy.jpg',
       visible: true,
       linkedin:'',
     },
     {
-      name: 'Fiorella Rojas',
-      role: 'Consultor Empresarial',
-      bio: 'Ayuda a los clientes a tomar decisiones informadas basadas en análisis financiero y estrategias tributarias.',
+      nombre: 'Fiorella Rojas',
+      rol: 'Consultor Empresarial',
+      biografia: 'Ayuda a los clientes a tomar decisiones informadas basadas en análisis financiero y estrategias tributarias.',
       image: 'assets/images_nosotros/Fiorella.jpg',
       visible: true,
       linkedin:'',

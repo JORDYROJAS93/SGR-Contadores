@@ -35,22 +35,22 @@
       <p class="text-muted">Profesionales comprometidos con la excelencia y tu éxito empresarial.</p>
     </div>
     <div class="row g-4 justify-content-center">
-      @for (member of team; track member.name) {
+      @for (member of team; track member.nombre) {
         <div class="col-md-6 col-lg-4" *ngIf="member.visible !== false">
           <div class="card h-100 border-0 shadow-sm p-3 text-center"
                style="border-radius: 16px; transition: transform 0.3s;">
             <!-- Contenedor de imagen corregido para evitar deformaciones -->
             <div class="mx-auto mt-3" style="width: 180px; height: 180px; overflow: hidden; border-radius: 50%;">
               <img [src]="member.image"
-                   [alt]="'Foto de ' + member.name"
+                   [alt]="'Foto de ' + member.nombre"
                    class="w-100 h-100"
                    style="object-fit: cover;">
             </div>
             <div class="card-body px-0">
-              <h5 class="card-title fw-bold mb-1" style="color: #1a1a1a;">{{ member.name }}</h5>
-              <p class="text-primary mb-3 fw-medium small">{{ member.role }}</p>
+              <h3 class="card-title fw-bold mb-1" style="color: #1a1a1a;">{{ member.nombre }}</h3>
+              <p class="text-primary mb-3 fw-medium small">{{ member.rol }}</p>
               <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">
-                {{ member.bio }}
+                {{ member.biografia }}
               </p>
               @if (member.linkedin) {
                 <a [href]="member.linkedin" 
