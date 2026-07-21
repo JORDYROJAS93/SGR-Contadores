@@ -31,7 +31,7 @@ export class FooterComponent {
     address: 'Puente Piedra, Lima, Perú',
     mobile: '+51 910 363 961',
     email: 'sgrasesoriacontable31@gmail.com',
-    businessHours: 'Lunes a Viernes: 9:00 am - 6:00 pm'
+    businessHours: 'Lunes a Viernes: 8:00 am - 6:00 pm'
   };
 
   get whatsAppLink(): string {
