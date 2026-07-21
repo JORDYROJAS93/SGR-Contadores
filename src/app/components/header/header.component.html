@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand" routerLink="/"> 
-        <img ngSrc="/assets/images_logos/logo_SGR_Completo.png" width="130" height="60" alt="Logo SGR"/>
+        <img ngSrc="assets/images_logos/logo_SGR_Completo.png" width="130" height="60" alt="Logo SGR"/>
       </a>
 
       <!-- Botón móvil -->
@@ -18,7 +18,8 @@
           @for (item of navItems; track item.name) {
           <li class="nav-item">
             <a class="nav-link" [routerLink]="item.path" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">
+              [routerLinkActiveOptions]="{exact: true}"
+              (click)="closeMenu()">
               {{item.name}}
             </a>
           </li>
@@ -27,7 +28,7 @@
 
         <!-- Botón de contacto -->
         <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
-          <a href="https://wa.me/51987654321" class="btn btn-primary d-flex align-items-center" target="_blank">
+          <a href="https://wa.me/51910363961" class="btn btn-primary d-flex align-items-center" target="_blank">
             <i class="fab fa-whatsapp me-2"></i>
             <span class="d-none d-md-inline">Consultar ahora</span>
           </a>

@@ -5,7 +5,6 @@ interface Service {
   title: string;
   description: string;
   icon: string; // Clase de Font Awesome u otro icono
-  image: string; // Ruta de la imagen del servicio (opcional)
 }
 
 @Component({
@@ -16,55 +15,43 @@ interface Service {
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent {
-  services: Service[] = [
-    {
-      title: 'Asesoría Fiscal',
-      description: 'Optimización de impuestos y cumplimiento normativo para PYMES.',
-      icon: 'fas fa-file-invoice-dollar',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg' // Ruta de la imagen del servicio
-    },
-    {
-      title: 'Contabilidad Integral',
-      description: 'Gestión contable completa para tu empresa.',
-      icon: 'fas fa-calculator',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg' // Ruta de la imagen del servicio
-    },
-    {
-      title: 'Planilla y Asesoría Laboral',
-      description: 'Administración de planillas y cumplimiento laboral.',
-      icon: 'fas fa-users-cog',
-     image: '/assets/images_servicios/AsesoriaFiscal.jpeg'
-    },
-    {
-      title: 'Constitución de Empresas',
-      description: 'Te acompañamos en la formalización de tu negocio.',
-      icon: 'fas fa-building',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg'
-    },
-    {
-      title: 'Auditoría y Control Interno',
-      description: 'Evaluación de procesos financieros y control interno.',
-      icon: 'fas fa-balance-scale',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg'
-    },
-    {
-      title: 'Declaraciones Juradas',
-      description: 'Preparación y presentación de declaraciones ante SUNAT.',
-      icon: 'fas fa-clipboard-list',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg'
-    },
-    {
-      title: 'Declaraciones Juradas',
-      description: 'Preparación y presentación de declaraciones ante SUNAT.',
-      icon: 'fas fa-clipboard-list',
-      image: '/assets/images_servicios/AsesoriaFiscal.jpeg'
-    }
-  ];
+  services = [
+  {
+    title: 'Contabilidad Integral',
+    description: 'Llevamos tu contabilidad al día con precisión y cumplimiento normativo, para que tú solo te enfoques en crecer.',
+    icon: 'fas fa-book'
+  },
+  {
+    title: 'Asesoría Fiscal',
+    description: 'Optimizamos tu carga tributaria y aseguramos el cumplimiento ante la SUNAT con estrategias claras y legales.',
+    icon: 'fas fa-balance-scale'
+  },
+  {
+    title: 'Planillas y RRHH',
+    description: 'Gestionamos tus planillas con exactitud, cumpliendo con leyes laborales y evitando multas.',
+    icon: 'fas fa-file-invoice-dollar'
+  },
+  {
+    title: 'Constitución de Empresas',
+    description: 'Te ayudamos a formalizar tu negocio desde cero: trámites, RUC, contabilidad inicial y más.',
+    icon: 'fas fa-building'
+  },
+  {
+    title: 'Declaraciones Juradas',
+    description: 'Presentamos tus declaraciones mensuales y anuales con puntualidad y máxima precisión.',
+    icon: 'fas fa-clipboard-check'
+  },
+  {
+    title: 'Asesoría Laboral',
+    description: 'Evita conflictos y multas con asesoría actualizada en leyes de trabajo y contratos.',
+    icon: 'fas fa-user-tie'
+  }
+];
 
   solicitarServicio(service: Service) {
     // Puedes personalizar el número y el mensaje
     window.open(
-      `https://wa.me/51999999999?text=Hola, deseo información sobre el servicio: ${encodeURIComponent(service.title)}`,
+      `https://wa.me/51910363961?text=Hola, deseo información sobre el servicio: ${encodeURIComponent(service.title)}`,
       '_blank'
     );
   }

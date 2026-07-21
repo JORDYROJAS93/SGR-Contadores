@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mi-estudio-contable": {
+    "SGR-Contadores": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,11 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mi-estudio-contable",
+            "outputPath": "dist/SGR-Contadores",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -40,15 +40,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
+              "baseHref": "/SGR-Contadores/",
               "budgets": [
                 {
                   "type": "initial",
@@ -75,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mi-estudio-contable:build:production"
+              "buildTarget": "SGR-Contadores:build:production"
             },
             "development": {
-              "buildTarget": "mi-estudio-contable:build:development"
+              "buildTarget": "SGR-Contadores:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,13 +94,20 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/SGR-Contadores/"
           }
         }
       }

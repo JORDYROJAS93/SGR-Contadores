@@ -19,7 +19,7 @@ import { NgOptimizedImage } from '@angular/common';
 export class HeaderComponent {
   isMenuCollapsed = true;
   isScrolled = false;
-
+ 
   navItems = [
     { name: 'Inicio', path: '/' },
     { name: 'Servicios', path: '/servicios' },
@@ -34,4 +34,11 @@ export class HeaderComponent {
       });
     }
   }
+
+
+// Método para cerrar el menú después de hacer clic
+closeMenu() {
+  this.isMenuCollapsed = true;
+}
+
 }

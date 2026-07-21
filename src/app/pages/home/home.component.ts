@@ -3,32 +3,33 @@ import { Component } from '@angular/core';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
 import { TestimonialSliderComponent } from '../../components/testimonial-slider/testimonial-slider.component';
 import { CarouselComponent } from '../../components/carousel/carousel.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ServiceCardComponent, TestimonialSliderComponent,CarouselComponent],
+  imports: [CommonModule, ServiceCardComponent, TestimonialSliderComponent,CarouselComponent,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   featuredServices = [
-    {
-      title: 'Asesoría Fiscal',
-      description: 'Optimización de impuestos y cumplimiento normativo para PYMES',
-      icon: 'fas fa-file-invoice-dollar'
-    },
-    {
-      title: 'Contabilidad Integral',
-      description: 'Gestión contable completa para tu empresa',
-      icon: 'fas fa-calculator'
-    },
-    {
-      title: 'Constitución de Empresas',
-      description: 'Te acompañamos en la formalización de tu negocio',
-      icon: 'fas fa-building'
-    }
-  ];
+  {
+    title: 'Contabilidad Integral',
+    description: 'Llevamos tus libros al día con cumplimiento normativo y reportes claros.',
+    icon: 'fas fa-book'
+  },
+  {
+    title: 'Asesoría Fiscal',
+    description: 'Optimización tributaria y presentación de declaraciones ante la SUNAT.',
+    icon: 'fas fa-balance-scale'
+  },
+  {
+    title: 'Gestión de Planillas',
+    description: 'Cálculo preciso de remuneraciones, beneficios y cumplimiento laboral.',
+    icon: 'fas fa-file-invoice-dollar'
+  }
+];
 
   testimonials = [
     {

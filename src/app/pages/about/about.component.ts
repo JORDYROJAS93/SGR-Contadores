@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
+// 👇 Importa lo necesario
+import { CommonModule } from '@angular/common';
+
 interface TeamMember {
   name: string;
   role: string;
   bio: string;
   image: string;
+  visible?: boolean;
+  linkedin?: string;
 }
 
 interface Value {
@@ -16,6 +21,9 @@ interface Value {
 @Component({
   selector: 'app-about',
   standalone: true,
+  imports: [
+    CommonModule  // ← Obligatorio para @for, @if, etc.
+  ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
@@ -25,19 +33,25 @@ export class AboutComponent {
       name: 'Dany Rojas',
       role: 'Contador Público',
       bio: 'Experto en asesoría fiscal y contabilidad integral. Cuenta con más de 10 años de experiencia en el sector.',
-      image: '/assets/images_nosotros/DenisRojas.jpg'
+      image: 'assets/images_nosotros/Denis.jpg',
+      visible: true,
+      linkedin:'https://www.linkedin.com/in/jordy-rojas-torres-361a0b119',
     },
     {
       name: 'Delsy Rojas',
       role: 'Especialista Laboral',
       bio: 'Responsable del área laboral y planillas. Ayuda a las empresas a cumplir con la normativa vigente.',
-      image: '/assets/images_nosotros/DelsyRojas.jpg'
+      image: 'assets/images_nosotros/Delsy.jpg',
+      visible: true,
+      linkedin:'',
     },
     {
       name: 'Fiorella Rojas',
       role: 'Consultor Empresarial',
       bio: 'Ayuda a los clientes a tomar decisiones informadas basadas en análisis financiero y estrategias tributarias.',
-      image: '/assets/images_nosotros/FiorellaRojas.jpg'
+      image: 'assets/images_nosotros/Fiorella.jpg',
+      visible: true,
+      linkedin:'',
     }
   ];
 
@@ -48,10 +62,11 @@ export class AboutComponent {
       icon: 'fas fa-shield-alt'
     },
     {
-      title: 'Experiencia',
-      description: 'Más de 10 años ayudando a PYMES a crecer con bases sólidas y cumplimiento legal.',
-      icon: 'fas fa-briefcase'
-    },
+      title: 'Conocimiento',
+      description: 'Actualizados en las mejores estrategias para apoyar a PYMES a crecer con bases sólidas y cumplimiento legal.',
+      icon: 'fas fa-atom'
+    }
+    ,
     {
       title: 'Servicio Personalizado',
       description: 'Cada cliente es único, por eso ofrecemos soluciones adaptadas a tus necesidades específicas.',

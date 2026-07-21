@@ -1,26 +1,101 @@
-<app-carousel>
-  
-</app-carousel>
+<!-- Carrusel principal -->
+<app-carousel></app-carousel>
 
-<section class="hero text-center py-5">
-  <h1>Bienvenido a  Nuestro Contable</h1>
-  <p class="lead">Ofrecemos soluciones integrales para la gestión financiera de tu empresa</p>
+<!-- Hero Section -->
+<section class="hero text-center py-6" 
+         style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+                padding: 5rem 0; 
+                color: #1a1a1a;">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-3" style="font-size: 2.5rem;">
+      Bienvenido a <span style="color: #0d6efd;">SGR Contadores</span>
+    </h1>
+    <p class="lead mb-4" style="max-width: 700px; margin: 0 auto; color: #495057; font-size: 1.1rem;">
+      Ofrecemos soluciones integrales en contabilidad, fiscalidad y gestión empresarial para PYMES y emprendedores en Puente Piedra.
+    </p>
+    <a routerLink="/contacto" 
+       class="btn btn-primary btn-lg px-4 py-2 me-3"
+       style="border-radius: 8px; font-weight: 500; background-color: #0d6efd; border: none;">
+      Contáctanos
+    </a>
+    <a routerLink="/servicios" 
+       class="btn btn-outline-secondary btn-lg px-4 py-2"
+       style="border-radius: 8px; border: 2px solid #adb5bd; color: #495057;">
+      Conoce nuestros servicios
+    </a>
+  </div>
 </section>
 
-<section class="services my-5">
+<!-- Servicios Destacados -->
+
+<section class="services my-6" 
+         style="padding: 5rem 0; background-color: #f9fbfd; color: #1a1a1a;">
   <div class="container">
-    <h2 class="text-center mb-4">Nuestros Servicios</h2>
-    <div class="row g-4">
-      <div class="col-md-4" *ngFor="let service of featuredServices">
+    <!-- Título -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-size: 2.2rem; color: #1a1a1a;">Nuestros Servicios</h2>
+      <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.1rem;">
+        Soluciones personalizadas para impulsar la gestión financiera de tu negocio con precisión, cumplimiento y tranquilidad.
+      </p>
+    </div>
+
+    <!-- Grid de servicios -->
+    <div class="row g-5 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let service of featuredServices">
+        <!-- Tarjeta reutilizable -->
         <app-service-card [service]="service"></app-service-card>
       </div>
     </div>
   </div>
 </section>
 
-<section class="testimonials my-5">
+<!-- Por qué elegirnos -->
+<section class="why-us my-6" 
+         style="background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%); padding: 5rem 0; color: #1a1a1a;">
   <div class="container">
-    <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
-    <app-testimonial-slider [testimonials]="testimonials"></app-testimonial-slider>
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-size: 2rem;">Por qué elegir a SGR Contadores</h2>
+      <p class="text-muted" style="max-width: 700px; margin: 0 auto;">
+        Expertos en acompañar a PYMES y emprendedores con servicios claros, rápidos y 100% personalizados.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <!-- Beneficio 1 -->
+      <div class="col-md-4 text-center">
+        <div class="p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%; transition: transform 0.3s;">
+          <div class="bg-primary bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+               style="width: 60px; height: 60px;">
+            <i class="fas fa-check fa-lg"></i>
+          </div>
+          <h4 class="h5 mb-3">Confianza y Seriedad</h4>
+          <p class="text-muted">Trabajamos con ética, transparencia y cumplimiento normativo. Tu información siempre segura.</p>
+        </div>
+      </div>
+
+      <!-- Beneficio 2 -->
+      <div class="col-md-4 text-center">
+        <div class="p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%; transition: transform 0.3s;">
+          <div class="bg-success bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+               style="width: 60px; height: 60px;">
+            <i class="fas fa-headset fa-lg"></i>
+          </div>
+          <h4 class="h5 mb-3">Asesoría Personalizada</h4>
+          <p class="text-muted">No somos robots. Te escuchamos y adaptamos nuestros servicios a tu negocio.</p>
+        </div>
+      </div>
+
+      <!-- Beneficio 3 -->
+      <div class="col-md-4 text-center">
+        <div class="p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%; transition: transform 0.3s;">
+          <div class="bg-info bg-gradient text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+               style="width: 60px; height: 60px;">
+            <i class="fas fa-clock fa-lg"></i>
+          </div>
+          <h4 class="h5 mb-3">Puntualidad Garantizada</h4>
+          <p class="text-muted">Nunca más multas por presentaciones atrasadas. Cumplimos plazos, siempre.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

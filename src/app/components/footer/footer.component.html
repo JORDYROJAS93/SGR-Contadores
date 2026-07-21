@@ -1,85 +1,261 @@
-<footer class="bg-dark text-white pt-5 pb-4">
-  <div class="container">
-    <div class="row g-4">
-      <!-- Logo y descripción -->
-      <div class="col-lg-4">
-        <a routerLink="/" class="d-flex align-items-center mb-3 text-decoration-none">
-          <img ngSrc="/assets/images_logos/logo_sgr.png" alt="SGR Contadores" width="100" height="100" priority>
-        </a>
-        <p class="text-muted">Expertos en asesoría contable, fiscal y laboral para PYMES y emprendedores en Puente
-          Piedra.</p>
+<footer style="
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  color: #f8f9fa;
+  padding: 60px 0 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+">
+  <div style="
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  ">
 
-        <div class="social-icons mt-4">
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-          <a [href]="whatsAppLink" target="_blank" class="text-white">
+    <!-- Logo y descripción -->
+    <div style="
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+    ">
+      <a routerLink="/" style="
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        text-decoration: none;
+      ">
+        <img src="assets/images_logos/logo_sgr.png" alt="SGR Contadores" width="110" height="110" style="
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        ">
+      </a>
+      <p style="
+        color: #ccc;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        letter-spacing: 0.3px;
+      ">
+        Expertos en asesoría contable, fiscal y laboral para PYMES y emprendedores en Puente Piedra.
+      </p>
+
+      <!-- Redes sociales -->
+      <div>
+        <h6 style="
+          color: #fff;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 15px;
+        ">
+          Síguenos
+        </h6>
+        <div style="display: flex; gap: 14px;">
+          <a href="https://www.facebook.com/profile.php?id=61577273711216" 
+             target="_blank" 
+             style="
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               background: #fff;
+               border-radius: 50%;
+               color: #1877f2;
+               font-size: 1rem;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+             "
+             title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.tiktok.com/@sgr.asesora.conta?_t=ZS-8ysKyBnmTMO&_r=1" 
+             target="_blank" 
+             style="
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               background: #fff;
+               border-radius: 50%;
+               color: #000;
+               font-size: 1rem;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+             "
+             title="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" 
+             target="_blank" 
+             style="
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               background: #fff;
+               border-radius: 50%;
+               color: #e1306c;
+               font-size: 1rem;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+             "
+             title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a [href]="whatsAppLink" 
+             target="_blank" 
+             style="
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               background: #fff;
+               border-radius: 50%;
+               color: #25d366;
+               font-size: 1rem;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+             "
+             title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
-
-      <!-- Servicios -->
-      <div class="col-md-4 col-lg-2">
-        <h5 class="text-uppercase mb-4 text-white">Servicios</h5>
-        <ul class="list-unstyled">
-          @for (service of services; track service.name) {
-          <li class="mb-2">
-            <a [routerLink]="service.link" class="text-light text-decoration-none hover-white">
-              {{service.name}}
-            </a>
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Enlaces rápidos -->
-      <div class="col-md-4 col-lg-2">
-        <h5 class="text-uppercase mb-4 text-white">Enlaces</h5>
-        <ul class="list-unstyled">
-          @for (link of quickLinks; track link.name) {
-          <li class="mb-2">
-            <a [routerLink]="link.link" class="text-light text-decoration-none hover-white">
-              {{link.name}}
-            </a>
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Contacto -->
-      <div class="col-md-4 col-lg-4">
-        <h5 class="text-uppercase mb-4 text-white">Contacto</h5>
-        <ul class="list-unstyled">
-          <li class="mb-3 d-flex">
-            <i class="fas fa-map-marker-alt me-3 mt-1"></i>
-            <span>{{contactInfo.address}}</span>
-          </li>
-          <li class="mb-3 d-flex">
-            <i class="fas fa-phone me-3 mt-1"></i>
-            <span>{{contactInfo.phone}}</span>
-          </li>
-          <li class="mb-3 d-flex">
-            <i class="fas fa-mobile-alt me-3 mt-1"></i>
-            <span>{{contactInfo.mobile}}</span>
-          </li>
-          <li class="mb-3 d-flex">
-            <i class="fas fa-envelope me-3 mt-1"></i>
-            <span>{{contactInfo.email}}</span>
-          </li>
-          <li class="mb-3 d-flex">
-            <i class="fas fa-clock me-3 mt-1"></i>
-            <span>{{contactInfo.businessHours}}</span>
-          </li>
-        </ul>
-      </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="row mt-4">
-      <div class="col text-center text-muted">
-        &copy; {{ currentYear }} SGR Contadores. Todos los derechos reservados.
-      </div>
+    <!-- Servicios -->
+    <div style="flex: 1; min-width: 160px;">
+      <h5 style="
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      ">
+        Servicios
+      </h5>
+      <ul style="list-style: none; padding: 0;">
+        @for (service of services; track service.name) {
+          <li style="margin-bottom: 10px;">
+            <a [routerLink]="service.link" style="
+              color: #ddd;
+              text-decoration: none;
+              font-size: 0.95rem;
+              transition: color 0.3s ease;
+            "
+            onmouseover="this.style.color='#0d6efd'"
+            onmouseout="this.style.color='#ddd'">
+              {{ service.name }}
+            </a>
+          </li>
+        }
+      </ul>
     </div>
+
+    <!-- Enlaces -->
+    <div style="flex: 1; min-width: 160px;">
+      <h5 style="
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      ">
+        Enlaces
+      </h5>
+      <ul style="list-style: none; padding: 0;">
+        @for (link of quickLinks; track link.name) {
+          <li style="margin-bottom: 10px;">
+            <a [routerLink]="link.link" style="
+              color: #ddd;
+              text-decoration: none;
+              font-size: 0.95rem;
+              transition: color 0.3s ease;
+            "
+            onmouseover="this.style.color='#0d6efd'"
+            onmouseout="this.style.color='#ddd'">
+              {{ link.name }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div style="flex: 1; min-width: 220px;">
+      <h5 style="
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      ">
+        Contacto
+      </h5>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+          <i class="fas fa-map-marker-alt" style="
+            color: #0d6efd;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+          "></i>
+          <span style="color: #ddd; font-size: 0.95rem;">{{ contactInfo.address }}</span>
+        </li>
+        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+          <i class="fas fa-mobile-alt" style="
+            color: #0d6efd;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+          "></i>
+          <span style="color: #ddd; font-size: 0.95rem;">{{ contactInfo.mobile }}</span>
+        </li>
+        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+          <i class="fas fa-envelope" style="
+            color: #0d6efd;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+          "></i>
+          <span style="color: #ddd; font-size: 0.95rem;">{{ contactInfo.email }}</span>
+        </li>
+        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+          <i class="fas fa-clock" style="
+            color: #0d6efd;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+          "></i>
+          <span style="color: #ddd; font-size: 0.95rem;">{{ contactInfo.businessHours }}</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    letter-spacing: 0.5px;
+  ">
+    &copy; {{ currentYear }} SGR Contadores. Todos los derechos reservados.
   </div>
 </footer>

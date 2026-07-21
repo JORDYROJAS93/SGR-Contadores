@@ -28,15 +28,14 @@ export class FooterComponent {
   ];
 
   contactInfo = {
-    address: 'Av. Principal 123, Puente Piedra, Lima, Perú',
-    phone: '(01) 123-4567',
-    mobile: '+51 987 654 321',
-    email: 'info@sgrcontadores.com',
+    address: 'Puente Piedra, Lima, Perú',
+    mobile: '+51 910 363 961',
+    email: 'sgrasesoriacontable31@gmail.com',
     businessHours: 'Lunes a Viernes: 9:00 am - 6:00 pm'
   };
 
   get whatsAppLink(): string {
-    const cleanedNumber = this.contactInfo.mobile.replace(/\D/g, '');
-    return `https://wa.me/ ${cleanedNumber}`;
-  }
+  const cleanedNumber = this.contactInfo.mobile.replace(/\D/g, '');
+  return `https://wa.me/${cleanedNumber}`;
+}
 }
